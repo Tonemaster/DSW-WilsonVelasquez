@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto sitio web 2022 - 16-01</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Proyecto sitio web 2022 - 16-01</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Temas</a>
+                <ul class="submenu">
+                    <li><a href="tema1.html">Tema 1</a></li>
+                    <li><a href="tema2.html">Tema 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Recursos Digitales</a>
+                <ul class="submenu">
+                    <li><a href="recurso1.html">Recurso 1</a></li>
+                    <li><a href="recurso2.html">Recurso 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Aprendizaje</a>
+                <ul class="submenu">
+                    <li><a href="actividad1.html">Actividad 1</a></li>
+                    <li><a href="actividad2.html">Actividad 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Acerca de</a>
+                <ul class="submenu">
+                    <li><a href="autor.html">Autor</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <article>
+
+            <center>
+                <h2>Flex Box</h2>
+            </center>
+            <p>Tradicionalmente, en CSS se ha utilizado el posicionamiento (static, relative, absolute...), los
+                elementos en línea o en bloque (y derivados) o los float, lo que a grandes rasgos no dejaba de ser un
+                sistema de creación de diseños bastante tradicional que no encaja con los retos que tenemos hoy en día:
+                sistemas de escritorio, dispositivos móviles, múltiples resoluciones, etc...</p>
+            <p>Flexbox es un sistema de elementos flexibles que llega con la idea de olvidar estos mecanismos y
+                acostumbrarnos a una mecánica más potente, limpia y personalizable, en la que los elementos HTML se
+                adaptan y colocan automáticamente y es más fácil personalizar los diseños. Está especialmente diseñado
+                para crear, mediante CSS, estructuras de una sóla dimensión.</p>
+            <h1>Conceptos</h1>
+            <p>Para empezar a utilizar flexbox lo primero que debemos hacer es conocer algunos de los elementos básicos
+                de este nuevo esquema, que son los siguientes:</p>
+            <img src="Recursos/flexbox1.jpg" alt="Conceptos básicos" />
+            <ul>
+                <li>
+                    <p><strong>Contenedor</strong>: Es el elemento padre que tendrá en su interior cada uno de los ítems
+                        flexibles. Observa que al contrario que muchas otras estructuras CSS, por norma general, en Flex
+                        establecemos las propiedades al elemento padre.</p>
+                    <ul>
+                        <li><strong>Eje principal</strong>: Los contenedores flexibles tendrán una orientación principal
+                            específica. Por defecto, es en horizontal (<em>en fila</em>).</li>
+                        <li><strong>Eje secundario</strong>: De la misma forma, los contenedores flexibles tendrán una
+                            orientación secundaria, perpendicular a la principal. Si la principal es en horizontal, la
+                            secundaria será en vertical, y viceversa.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Ítem</strong>: Cada uno de los hijos flexibles que tendrá el contenedor en su interior.
+                    </p>
+                </li>
+            </ul>
+            <p>Una vez tenemos claro esto, imaginemos el siguiente escenario:</p>
+            <img src="Recursos/flexbox2.png" alt="Esenario">
+            <p>Para activar el modo <strong>flexbox</strong>, hemos utilizado sobre el elemento contenedor la propiedad
+                <strong>display</strong> que vimos
+                en Tipos de elementos, y especificar el valor <strong>flex</strong> o <strong>inline-flex</strong>
+                (dependiendo de como queramos que se
+                comporte el contenedor):
+            </p>
+            <img src="Recursos/flexbox3.png" alt="Modo flexbox">
+            <p>Por defecto, y sólo con esto, observaremos que los elementos se disponen todos sobre una misma línea.
+                Esto ocurre porque estamos utilizando el modo flexbox y estaremos trabajando con ítems flexibles
+                básicos, garantizando que no se desbordarán ni mostrarán los problemas que, por ejemplo, tienen los
+                porcentajes sobre elementos que no utilizan flexbox.</p>
+
+            <h1>Dirección de los ejes</h1>
+            <p>Existen dos propiedades principales para manipular la dirección y comportamiento de los ítems a lo largo
+                del eje principal del contenedor. Son las siguientes:</p>
+            <img src="Recursos/flexbox4.png" alt="Dirección de eje">
+            <p>Mediante la propiedad <strong>flex-direction</strong> podemos modificar la dirección del <strong>eje
+                    principal</strong> del contenedor para
+                que se oriente en horizontal (<em>por defecto</em>) o en vertical. Además, también podemos incluir el
+                sufijo
+                <strong>-reverse</strong> para indicar que coloque los ítems en orden inverso.
+            </p>
+            <img src="Recursos/flexbox5.png" alt="Direción del eje principal">
+            <p>Esto nos permite tener un control muy alto sobre el orden de los elementos en una página. Veamos la
+                aplicación de estas propiedades sobre el ejemplo anterior, para modificar el flujo del eje principal del
+                contenedor:</p>
+            <img src="Recursos/flexbox6.png" alt="Ejemplo flex-direction">
+            <p>Por otro lado, existe otra propiedad llamada <strong>flex-wrap</strong> con la que podemos especificar el
+                comportamiento del contenedor respecto a evitar que se desborde (<em>nowrap, valor por defecto</em>) o
+                permitir que lo haga, en cuyo caso, estaríamos hablando de un <strong>contenedor flexbox
+                    multilinea</strong>.</p>
+            <img src="Recursos/flexbox7.png" alt="flex-wrap">
+            <p>En el caso de especificar <strong>nowrap</strong> (<em>u omitir la propiedad
+                    <strong>flex-wrap</strong></em> ) en el contenedor, los 3 ítems se
+                mostrarían en una misma línea del contenedor. En ese caso, cada ítem debería tener un 50% de ancho
+                (<em>o
+                    sea, 100px de los 200px del contenedor</em>). Un tamaño de <strong>100px</strong> por ítem, sumaría
+                un total de <strong>300px</strong>, que no
+                cabrían en el contenedor de 200px, por lo que flexbox reajusta los ítems flexibles para que quepan todos
+                en la misma línea, manteniendo las mismas proporciones.<br>
+
+                Sin embargo, si especificamos wrap en la propiedad flex-wrap, lo que permitimos es que el contenedor se
+                pueda desbordar, pasando a ser un contenedor multilínea, que mostraría el ítem 1 y 2 en la primera linea
+                (con un tamaño de 100px cada uno) y el ítem 3 en la línea siguiente, dejando un espacio libre para un
+                posible ítem 4.</p>
+
+            <h4>Referencia Bibliográfica</h4>
+            <p>Flexbox CSS - CSS en español. (s. f.). Recuperado 25 de marzo de 2022, de <a
+                    href="https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/">https://lenguajecss.com/css/maquetacion-y-colocacion/flexbox/</a>
+            </p>
+        </article>
+
+        <aside>
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="340" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+        </aside>
+
+    </section>
+
+    <footer>
+        <p> &copy; Todos los derechos reservados | Wilson Arturo Velasquez Vela | E-mail: tonemaster41@gmail.com |
+            Skype: tonemaster41@hotmail.com | 25-03-2022</p>
+    </footer>
+
+</body>
+
+</html>
