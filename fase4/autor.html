@@ -13,13 +13,18 @@
 </head>
 
 <body>
-    <header>
-        <h1>Proyecto sitio web 2022 - 16-01</h1>
-    </header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <header class="row py-5 bg-light">
+            <div class="col text-center fw-normal">
+                <h1>Proyecto sitio web 2022 - 16-01</h1>
+            </div>
+        </header>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-1">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="Recursos/LOGO-3-UNAD.png" alt="" width="100">
+                <img src="Recursos/LOGO-3-UNAD.png" alt="logo unad" width="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +33,7 @@
 
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav ">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -75,39 +80,60 @@
     </nav>
 
     <section>
-        <article>
-            <h1>
-                <center>Acerca del autor del sitio</center>
-            </h1>
-            <p>
-                <hr>
-                <b>Nombre:</b> Wilson Arturo Velasquez Velasquez Vela <br>
-                <b>Código:</b> 1121718638 <br>
-                <b>Programa:</b> Ingenieria de sistemas <br>
-                <b>E-mail:</b> tonemaster41@gmail.com <br>
-                <b>Skype:</b> tonemaster41@hotmail.com <br>
-                <hr>
-                <b>Fotografia reciente:</b>
-                <br>
-                <img src="Recursos/autor.jpg" alt="Fotografia del autor del sitio." width="50%">
-            </p>
-        </article>
+        <div class="container-fluid">
+            <div class="row row-cols-md-2">
+                <div class="col-md-9 col-sm-12 px-4 py-3">
+                    <article>
+                        <h1 class="text-center">
+                            Acerca del autor del sitio
+                        </h1>
+                        <p>
+                            <hr>
+                            <b>Nombre:</b> Wilson Arturo Velasquez Velasquez Vela <br>
+                            <b>Código:</b> 1121718638 <br>
+                            <b>Programa:</b> Ingenieria de sistemas <br>
+                            <b>E-mail:</b> tonemaster41@gmail.com <br>
+                            <b>Skype:</b> tonemaster41@hotmail.com <br>
+                            <hr>
+                            <b>Fotografia reciente:</b>
+                            <br>
+                        </p>
+                        <div class="text-center">
+                            <img src="Recursos/autor.jpg" alt="Fotografia del autor del sitio." width="50%">
+                        </div>
 
-        <aside>
-            <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                width="340" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-        </aside>
+                    </article>
+                </div>
 
+                <div class="col-md-3 col-sm-12 p-3 bg-secondary text-center">
+                    <aside>
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            width="340" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </aside>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p> &copy; Todos los derechos reservados | Wilson Arturo Velasquez Vela | E-mail: tonemaster41@gmail.com |
-            Skype: tonemaster41@hotmail.com | 25-03-2022</p>
-    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+    <div id="footer">
+        <div class="row justify-content-md-center py-5 bg-dark m-0">
+            <div class="col text-center text-light fw-normal px-4">
+                <p> &copy; Todos los derechos reservados | Wilson Arturo Velasquez Vela | E-mail: tonemaster41@gmail.com
+                    | Skype: tonemaster41@hotmail.com | 25-03-2022</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
